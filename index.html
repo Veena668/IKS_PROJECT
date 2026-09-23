@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthaśāstra Cryptography|Ancient Ideas, Digital Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="particles" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a class="logo" href="#home">𑀅 <span>Arthaśāstra</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#learn">Learn</a>
+      <a href="#cipher">Cipher Lab</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" title="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text reveal">
+        <p class="eyebrow">INDIAN KNOWLEDGE SYSTEMS × COMPUTATIONAL SYSTEMS</p>
+        <h1>Ancient Ideas,<br><span>Digital Security.</span></h1>
+        <p class="hero-sub">
+          Explore secret communication, coded messages, substitution and transposition
+          through a simple interactive cryptography laboratory.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#cipher">Try Cipher Lab →</a>
+          <a class="btn secondary" href="#learn">Explore IKS</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>01</b><span>Secret<br>Communication</span></div>
+          <div><b>02</b><span>Cipher<br>Techniques</span></div>
+          <div><b>03</b><span>Secure<br>Information</span></div>
+        </div>
+      </div>
+
+      <div class="mandala-wrap reveal">
+        <div class="mandala">
+          <div class="mandala-ring ring1"></div>
+          <div class="mandala-ring ring2"></div>
+          <div class="mandala-ring ring3"></div>
+          <div class="mandala-core">ॐ</div>
+        </div>
+        <div class="floating-card card-top">🔐 Coded Message</div>
+        <div class="floating-card card-bottom">⌁ Secure Communication</div>
+      </div>
+    </section>
+
+    <section class="section" id="learn">
+      <div class="section-heading reveal">
+        <p class="eyebrow">FROM IKS TO COMPUTER SCIENCE</p>
+        <h2>What does Arthaśāstra teach us?</h2>
+        <p>
+          Arthaśāstra in IKS connects with secure communication and information
+          protection. This website turns those concepts into an interactive learning experience.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="info-card reveal">
+          <div class="icon">🕵️</div>
+          <h3>Secret Communication</h3>
+          <p>Information can be communicated in ways intended to protect it from unwanted readers.</p>
+          <span>IKS Concept</span>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">🔁</div>
+          <h3>Substitution</h3>
+          <p>Symbols or letters are replaced according to a rule to create a coded message.</p>
+          <span>Modern Cipher Idea</span>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">🔀</div>
+          <h3>Transposition</h3>
+          <p>The characters remain the same, but their positions are rearranged using a rule.</p>
+          <span>Modern Cipher Idea</span>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">🛡️</div>
+          <h3>Information Protection</h3>
+          <p>Secure communication is a foundation for protecting information and controlling access.</p>
+          <span>Cybersecurity Link</span>
+        </article>
+      </div>
+
+      <div class="note reveal">
+        <b> Note :</b> The cipher demonstrations below are simple modern educational
+        examples used to explain the computational concepts. They should not
+        be treated as a reconstruction of a specific historical Arthaśāstra cipher.
+      </div>
+    </section>
+
+    <section class="section cipher-section" id="cipher">
+      <div class="section-heading reveal">
+        <p class="eyebrow"> EXPLORE CIPHER LAB</p>
+        <h2>Encode your secret message</h2>
+        <p>Type a message, choose a technique, and watch the transformation happen.</p>
+      </div>
+
+      <div class="lab reveal">
+        <div class="lab-controls">
+          <label for="method">Choose technique</label>
+          <div class="method-grid">
+            <button class="method active" data-method="substitution">
+              <strong>🔤 Substitution</strong>
+              <small>Shift letters using a simple rule</small>
+            </button>
+            <button class="method" data-method="transposition">
+              <strong>🔀 Transposition</strong>
+              <small>Rearrange character positions</small>
+            </button>
+          </div>
+
+          <label for="message">Your message</label>
+          <textarea id="message" maxlength="500" placeholder="Type your secret message here...">MEET AT THE LIBRARY</textarea>
+
+          <div class="key-row" id="shiftRow">
+            <label for="shift">Shift</label>
+            <input id="shift" type="number" min="1" max="25" value="3">
+          </div>
+
+          <button class="btn primary full" id="encryptBtn">🔐 Encrypt Message</button>
+          <button class="btn secondary full" id="clearBtn">Clear</button>
+        </div>
+
+        <div class="result-panel">
+          <div class="result-head">
+            <span>OUTPUT</span>
+            <button id="copyBtn" class="copy-btn">Copy</button>
+          </div>
+          <div class="cipher-animation" id="cipherAnimation">
+            <div class="lock">🔒</div>
+            <div class="scan"></div>
+          </div>
+          <div class="output" id="output">Your encrypted message will appear here.</div>
+          <div class="explanation" id="explanation">
+            Choose a technique and click <b>Encrypt Message</b>.
+          </div>
+          <button class="decrypt-btn" id="decryptBtn">↩ Decrypt output</button>
+          <div class="output decrypted" id="decrypted"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>Message → Rule → Cipher → Message</h2>
+      </div>
+      <div class="flow">
+        <div class="flow-item reveal"><b>01</b><span>Write message</span></div>
+        <div class="arrow">→</div>
+        <div class="flow-item reveal"><b>02</b><span>Apply rule</span></div>
+        <div class="arrow">→</div>
+        <div class="flow-item reveal"><b>03</b><span>Get coded text</span></div>
+        <div class="arrow">→</div>
+        <div class="flow-item reveal"><b>04</b><span>Decrypt</span></div>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+        <h2>Quick IKS Cryptography Quiz</h2>
+      </div>
+
+      <div class="quiz-card reveal">
+        <div class="quiz-progress"><span id="progressBar"></span></div>
+        <p id="questionNumber">Question 1 of 5</p>
+        <h3 id="question">Loading...</h3>
+        <div id="answers" class="answers"></div>
+        <button class="btn primary" id="nextBtn" disabled>Next Question →</button>
+        <div id="quizResult" class="quiz-result"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Arthaśāstra Cryptography</b><br><small>IKS in Computational Systems</small></div>
+    <div><b>Basic Knowledge of Arthaśāstra & Cryptography</b><br><small>Only for Educational Purpose</small></div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
